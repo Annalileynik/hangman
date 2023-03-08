@@ -1,6 +1,10 @@
-export function Word() {
-    const word = "hangman"
-    const guessLetters = ['h', 'a']
+type WordProps = {
+    guessLetters: string[]
+    wordGuess: string
+}
+export function Word({guessLetters,wordGuess }:WordProps) {
+
+
     return (
         <div
             style={{
@@ -12,7 +16,7 @@ export function Word() {
                 fontFamily: "monospace",
             }}>
 
-            {word.split("").map((letter, index) => (
+            {wordGuess.split("").map((letter, index) => (
                 <span style={{borderBottom: ".1em solid black"}} key={index}>
 
                    <span style={{visibility: guessLetters.includes(letter) ? "visible" : "hidden"}}

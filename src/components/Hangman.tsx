@@ -82,16 +82,17 @@ const RIGHT_LEG = (
         }}
     />)
 const BODYPARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
-export function Hangman(){
+
+type HangmanProps = {
+    numberOfGuesses: number
+}
+
+export function Hangman({numberOfGuesses}:HangmanProps){
 
     return(
         <div style={{ position: "relative" }}>
-            {HEAD}
-            {BODY}
-            {RIGHT_ARM}
-            {LEFT_ARM}
-            {RIGHT_LEG}
-            {LEFT_LEG}
+            {BODYPARTS.slice(0, numberOfGuesses)}
+
             <div
                 style={{
                     height: "50px",

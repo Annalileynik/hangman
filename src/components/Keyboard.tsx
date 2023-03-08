@@ -27,7 +27,12 @@ const KEYS = [
     "y",
     "z",
 ]
-export function Keyboard(){
+type KeyboardProps = {
+    activeLetters: string[]
+    inactiveLetters: string[]
+    addGuessLetter: (letter: string)=> void
+}
+export function Keyboard({activeLetters,inactiveLetters,addGuessLetter}: KeyboardProps){
     return(
         <div
             style={{
