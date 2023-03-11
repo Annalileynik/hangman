@@ -24,7 +24,6 @@ const BODY = (
         }}
     />
 )
-
 const RIGHT_ARM = (
     <div
         style={{
@@ -39,7 +38,6 @@ const RIGHT_ARM = (
         }}
     />
 )
-
 const LEFT_ARM = (
     <div
         style={{
@@ -82,11 +80,9 @@ const RIGHT_LEG = (
         }}
     />)
 const BODYPARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
-
 type HangmanProps = {
     numberOfGuesses: number
 }
-
 export function Hangman({numberOfGuesses}:HangmanProps){
 
     return(
